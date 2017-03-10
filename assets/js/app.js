@@ -1,7 +1,7 @@
 var app = angular.module('app', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
-    
+    $("html, body").animate({ scrollTop: 0 }, 200);
     $urlRouterProvider.otherwise('/about');
     
     $stateProvider
