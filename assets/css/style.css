@@ -201,20 +201,28 @@ header {
 #social{
     display: -webkit-flex;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     width: 35%;
 }
 #social h2 {
     text-transform: uppercase;
 }
+#social a {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
 #social img {
-    padding: 10px 5px 0 0;
+    padding-right: 15px;
     height: 80px;
     width: auto;
+}
+#social a img, #social a h3 {
     transition: all .2s ease-in-out;
 }
-#social img:hover {
+#social a:hover img, #social a:hover h3 {
     transform: scale(1.15);
 }
 #contact-area #form {
@@ -360,10 +368,10 @@ header {
     .beside, #contact-area{
         flex-direction: column;
     }
-    #social {
-        width: 60%;
-    }
     #contact-area #form {
-        margin-left: 0;
+        display: none;
+    }
+    #social {
+        width: auto;
     }
 }
