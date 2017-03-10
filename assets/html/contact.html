@@ -1,1 +1,25 @@
-<h1>Contact Page</h1>
+<div class="contact">
+    <div class="surround-hr">
+        <h1>Contact</h1>
+    </div>
+    <div id="contact-area">
+        <div id="social">
+            <h2>Social Media</h2>
+            <a href="" target="_blank"><img src="assets/img/facebook.png"></a>
+            <a href="https://linkedin.com/in/maadair" target="_blank"><img src="assets/img/linkedin.png"></a>
+            <a href="https://simbi.com/michael-adair-9ccb6" target="_blank"><img src="assets/img/simbi.png"></a>
+            <a href="mailto:michael@maadair.com" target="_top"><img src="assets/img/mail.png"></a>
+        </div>
+        <div id="form">
+            <h3>Send me an Message! I will attempt to reply to it as soon as I can, just be sure to leave an email address I can contact you at.</h3>
+            <form>
+                <div class="beside">
+                    <input type="text" placeholder="Subject Line" ng-model="contact.subject">
+                    <input type="text" placeholder="youremail@domain.com" ng-model="contact.email">
+                </div>
+                <textarea placeholder="Your message to me, Michael Adair.." rows="20" cols="35" autocomplete="off" ng-model="contact.message"></textarea>
+                <div class="button" ng-click="contact.submit()">Submit</div>
+            </form>
+        </div>
+    </div>
+</div>
