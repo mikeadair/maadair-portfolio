@@ -5,29 +5,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Raleway:700">
+    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
     <script src='assets/js/app.js'></script>
     <script src='assets/js/script.js'></script>
 </head>
 <body ng-controller="PageController">
-    <header>
-        <div id="logo" ui-sref="about">
-            <img src="assets/img/logo.svg">
-        </div>
-        <div id="menu-icon" onclick="toggleMobileNav()"></div>
-        <section id="navbar">
-            <a ui-sref="about" class="current" onclick="navClicked()">About</a>
-            <a ui-sref="portfolio" onclick="navClicked()">Portfolio</a>
-            <a ui-sref="contact" onclick="navClicked()">Contact</a>
-        </section>
-    </header>
     <div id="content">
+        <header>
+            <div id="logo" ui-sref="about"></div>
+            <div id="menu-icon" onclick="toggleMobileNav()"></div>
+            <section id="navbar">
+                <a ui-sref="about" class="current" onclick="navClicked()">About</a>
+                <a ui-sref="portfolio" onclick="navClicked()">Portfolio</a>
+                <a ui-sref="contact" onclick="navClicked()">Contact</a>
+            </section>
+        </header>
         <div class="page" ui-view autoscroll="false"></div>
     </div>
-    <div id="push"></div>
     <div id="bottom">
-        <div id="footer">
-            Footer
-        </div>
+        <p id="footer">
+            &copy; <script type="text/javascript"> document.write(new Date().getFullYear()); </script> Michael A. Adair
+        </p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </body>

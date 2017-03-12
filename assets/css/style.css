@@ -5,8 +5,14 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-h1,h2,h3,h4,p {
+h1,h2,h3,h4 {
+    font-family: 'Raleway', sans-serif;
     color: #990000;
+}
+p {
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
 }
 html, body {
     max-width: 100%;
@@ -15,7 +21,12 @@ html, body {
     overflow-x: hidden;
     margin: 0;
 }
+body {
+    display: flex;
+    flex-direction: column;
+}
 a {
+    font-family: 'Lato', sans-serif;
     text-decoration: none;
 }
 header {
@@ -34,10 +45,9 @@ header {
     margin-left: 2%;
     top: 5px;
     cursor: pointer;
-}
-#logo img {
-    width: 100%;
-    height: 100%;
+    background-image: url('../img/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 #menu-icon {
     position: relative;
@@ -45,11 +55,12 @@ header {
     float: right;
 	width: 40px;
 	height: 40px;
-    margin-right: 2%;
+    margin-right: 13%;
     top: 5px;
-	background-image: url(../img/menu-button.png);
+	background-image: url('../img/mobile-btn-1.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    transition: all .2s ease-in-out;
 }
 #navbar {
     display: block;
@@ -83,7 +94,6 @@ header {
 	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
 	transition: transform 0.3s, opacity 0.2s;
 }
-
 #navbar a::before {
 	margin-right: 10px;
     content: '{';
@@ -91,7 +101,6 @@ header {
 	-moz-transform: translateX(20px);
 	transform: translateX(20px);
 }
-
 #navbar a::after {
 	margin-left: 10px;
     content: '}';
@@ -99,7 +108,6 @@ header {
 	-moz-transform: translateX(-20px);
 	transform: translateX(-20px);
 }
-
 #navbar a:hover::before,
 #navbar a:hover::after,
 #navbar a:focus::before,
@@ -110,10 +118,7 @@ header {
 	transform: translateX(0px);
 }
 #content {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -30px;
+    flex: 1;
 }
 .page {
     width: 100%;
@@ -134,16 +139,13 @@ header {
     width: 55%;
     padding-right: 5%;
 }
-.about #info p {
-    color: #000;
-}
 .about #showcase {
     width: 35%;
     float: right;
     padding-left: 5%;
 }
 .about #showcase img{
-    height: 250px;
+    height: 50%;
 }
 .portfolio {
     padding-top: 40px;
@@ -153,8 +155,9 @@ header {
     width: 60%;
     margin: 0 auto;
 }
-.portfolio #summary h3 {
-    color: #000;
+.portfolio #summary p {
+    font-size: 14pt;
+    line-height: 1.7;
 }
 #projects, .project {
     width: 100%;
@@ -167,10 +170,13 @@ header {
 }
 .project .title {
     text-transform: uppercase;
+    font-size: 20pt;
 }
 .project .summary {
     color: #000;
     line-height: 1.5;
+    font-size: 14pt;
+    line-height: 1.45;
 }
 .project .preview {
     height: auto;
@@ -228,9 +234,6 @@ header {
 #contact-area #form {
     width: 55%;
     margin-left: 10%
-}
-#contact-area #form h3 {
-    color: #000;
 }
 #contact-area #form input {
     width: 50%;
@@ -303,22 +306,34 @@ header {
     padding: 5px 10px;
     height: 40px;
 }
-#bottom, #push {
-    height: 30px;
-}
-#footer {
+#bottom {
     height: 30px;
     background-color: #990000;
+}
+#footer {
+    padding: 5px 3% 5px 3%;
+    height: 30px;
     width: 100%;
     color: #fff;
+    margin: 0;
+    font-size: 20px;
+    line-height: 1;
+}
+@media only screen adn (min-width: 876px) {
+    #navbar {
+        display: block;
+    }
 }
 @media only screen and (max-width : 875px) {
 	header {
 		position: absolute;
         height: 50px;
+        top: 0;
 	}
     #logo {
-        display: none;
+        width: 60%;
+        top: 0;
+        background-image: url('../img/logo-mobile.png');
     }
 	#menu-icon {
 		display: inline-block;
