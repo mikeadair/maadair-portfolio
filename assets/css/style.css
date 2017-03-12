@@ -140,12 +140,12 @@ header {
     padding-right: 5%;
 }
 .about #showcase {
-    width: 35%;
+    width: 45%;
     float: right;
     padding-left: 5%;
 }
 .about #showcase img{
-    height: 50%;
+    width: 80%;
 }
 .portfolio {
     padding-top: 40px;
@@ -183,6 +183,9 @@ header {
     margin: 15px 10px;
     width: 30%;
     border: #000 solid 5px;
+}
+.project .preview img {
+    width: 100%;
 }
 .project .about {
     width: 60%;
@@ -230,6 +233,12 @@ header {
 }
 #social a:hover img, #social a:hover h3 {
     transform: scale(1.15);
+}
+#contact-area .hr {
+    background-color: #990000;
+    width: 50%;
+    min-height: 6px;
+    display: none;
 }
 #contact-area #form {
     width: 55%;
@@ -369,6 +378,7 @@ header {
     .about #showcase {
         text-align: center;
         padding: 20px 0 0 0;
+        margin-bottom: 30px;
     }
     .project, .project:nth-of-type(even) {
         flex-direction: column;
@@ -383,8 +393,14 @@ header {
     .beside, #contact-area{
         flex-direction: column;
     }
+    #contact-area .hr {
+        display: block;
+    }
     #contact-area #form {
-        display: none;
+        margin: 0;
+    }
+    #contact-area #form input{
+        margin-right: 0;
     }
     #social {
         width: auto;
