@@ -63,7 +63,6 @@ tab {
 	background-image: url('../img/mobile-btn-1.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    transition: all .2s ease-in-out;
 }
 #navbar {
     display: block;
@@ -85,8 +84,7 @@ tab {
 	text-shadow: 0 0 1px rgba(255,255,255,0.3);
 	font-size: 1.35em;
 }
-#navbar a:hover,
-#navbar a:focus {
+#navbar a:hover {
 	outline: none;
 }
 #navbar a::before,
@@ -112,9 +110,7 @@ tab {
 	transform: translateX(-20px);
 }
 #navbar a:hover::before,
-#navbar a:hover::after,
-#navbar a:focus::before,
-#navbar a:focus::after {
+#navbar a:hover::after{
 	opacity: 1;
 	-webkit-transform: translateX(0px);
 	-moz-transform: translateX(0px);
@@ -163,6 +159,8 @@ tab {
 .about #skills .title {
     color: #fff;
     text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
 }
 .about #skills .images {
     display: -webkit-flex;
@@ -179,14 +177,16 @@ tab {
     margin: 0 1.5% 10px 1.5%;
 }
 .about #skills .images .item img {
-    width: 90%;
+    z-index: 5;
+    width: 70%;
 }
 .about #skills .desc {
     color: #fff;
     padding: 0 10%;
 }
-.about .employment {
+.about .h2-title {
     font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #fff;
     background-color: #990000;
@@ -195,16 +195,27 @@ tab {
     margin-left: -50%;
     padding-left: 50%;
 }
+.about .edu {
+    width: 100%;
+}
+.about .edu .loc, .about .edu .year {
+    display: inline-block;
+    color: #990000;
+    text-transform: uppercase;
+}
+.about .edu .year {
+    float: right;
+}
 .about .job {
     margin-bottom: 50px;
 }
-.about .job p{
+.about .job p, .about .edu p{
     margin: 0;
 }
 .about .job .title {
     width: 100%;
 }
-.about .job .right {
+.about .right {
     text-align: right;
     float: right;
 }
@@ -455,7 +466,10 @@ tab {
         margin-bottom: 30px;
     }
     .project, .project:nth-of-type(even) {
-        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    .project {
+        padding: 30px 20px;    
     }
     .project .preview {
         width: 40%;
@@ -478,5 +492,8 @@ tab {
     }
     #social {
         width: auto;
+    }
+    .about #showcase img, .about #skills {
+        width: 50%;
     }
 }
