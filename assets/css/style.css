@@ -199,6 +199,7 @@ tab {
 }
 .about .edu {
     width: 100%;
+    margin-bottom: 30px;
 }
 .about .edu .loc, .about .edu .year {
     display: inline-block;
@@ -314,6 +315,7 @@ tab {
     padding-right: 15px;
     height: 80px;
     width: auto;
+    cursor: pointer;
 }
 #social a img, #social a h3 {
     transition: all .2s ease-in-out;
@@ -415,7 +417,13 @@ tab {
     font-size: 20px;
     line-height: 1;
 }
-@media only screen adn (min-width: 876px) {
+#contact-area #form #error{
+    color: #990000;
+}
+#contact-area #form .error{
+    background-color: #BB0000;
+}
+@media only screen and (min-width: 876px) {
     #navbar {
         display: block;
     }
@@ -488,14 +496,32 @@ tab {
     }
     #contact-area #form {
         margin: 0;
+        width: 75%;
+    }
+    #contact-area #form p {
+        text-align: center;
     }
     #contact-area #form input{
         margin-right: 0;
+        width: 80%;
     }
     #social {
         width: auto;
     }
     .about #showcase img, .about #skills {
         width: 50%;
+    }
+    .about .edu .year, .about .right {
+        float: none;
+        text-align: left;
+        display: block;
+    }
+}
+@media only screen and (max-width : 500px) {
+    .about #showcase #skills, .about #showcase img {
+        width: 90%;
+    }
+    .project .about {
+        width: 95%;
     }
 }

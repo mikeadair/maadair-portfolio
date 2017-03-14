@@ -4,7 +4,7 @@
     </div>
     <div id="contact-area">
         <div id="social">
-            <a href="" target="_blank"><img src="assets/img/facebook.png"> <h3>Facebook</h3></a>
+            <a href="https://github.com/mikeadair" target="_blank"><img src="assets/img/github.png"> <h3>Github</h3></a>
             <a href="https://linkedin.com/in/maadair" target="_blank"><img src="assets/img/linkedin.png"> <h3>LinkedIn</h3></a>
             <a href="https://simbi.com/michael-adair-9ccb6" target="_blank"><img src="assets/img/simbi.png"> <h3>Simbi</h3></a>
             <a href="mailto:michael@maadair.com" target="_top"><img src="assets/img/mail.png"> <h3>Email</h3></a>
@@ -13,12 +13,13 @@
         <div id="form">
             <p>Send me an Message! I will attempt to reply to it as soon as I can, just be sure to leave an email address I can contact you at.</p>
             <form>
+                <div id="error" ng-show="error">{{error}}</div>
                 <div class="beside">
-                    <input type="text" placeholder="Subject Line" ng-model="contact.subject">
-                    <input type="text" placeholder="youremail@domain.com" ng-model="contact.email">
+                    <input type="text" placeholder="Subject Line" ng-model="subject" ng-class="{'error': issue == 'subject'}">
+                    <input type="text" placeholder="youremail@domain.com" ng-model="email" ng-class="{'error': issue == 'email'}">
                 </div>
-                <textarea placeholder="Your message to me, Michael Adair.." rows="20" cols="35" autocomplete="off" ng-model="contact.message"></textarea>
-                <div class="button" ng-click="contact.submit()">Submit</div>
+                <textarea placeholder="Your message to me, Michael Adair.." rows="20" cols="35" autocomplete="off" ng-model="message" ng-class="{'error': issue == 'message'}"></textarea>
+                <div class="button" ng-click="submit()">Submit</div>
             </form>
         </div>
     </div>
