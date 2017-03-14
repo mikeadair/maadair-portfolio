@@ -137,6 +137,8 @@ tab {
     float: left;
     width: 55%;
     padding-right: 5%;
+}
+.about #info, .about #showcase {
     margin-bottom: 30px;
 }
 .about #showcase {
