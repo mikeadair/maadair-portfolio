@@ -3,29 +3,29 @@ var app = angular.module('app', ['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider) {
     $("html, body").animate({ scrollTop: 0 }, 200);
     $urlRouterProvider.otherwise('/about');
-    
+
     $stateProvider
         .state('about', {
             url: '/about',
-            templateUrl: 'assets/html/about.html'
+            templateUrl: 'assets/html/about.html?2'
         })
-        
+
         .state('portfolio', {
             url: '/portfolio',
-            templateUrl: 'assets/html/portfolio.html'
+            templateUrl: 'assets/html/portfolio.html?2'
         })
 
         .state('contact', {
             url: '/contact',
-            templateUrl: 'assets/html/contact.html',
+            templateUrl: 'assets/html/contact.html?2',
             controller: 'ContactController'
         });
-        
-    
+
+
 });
 
 app.controller('PageController', function($scope) {
-    
+
 });
 
 app.controller('ContactController', function($scope, $http) {
@@ -34,7 +34,7 @@ app.controller('ContactController', function($scope, $http) {
     $scope.message;
     $scope.error;
     $scope.issue;
-    
+
     $scope.submit = function(){
         if($scope.email != null && $scope.email != "" && $scope.email.match(/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]*\.([a-z]{2,4})$/)){
             if($scope.subject != null && $scope.subject != ""){
@@ -46,7 +46,7 @@ app.controller('ContactController', function($scope, $http) {
                         subject: $scope.subject,
                         email: $scope.email
                     });
-                    $http.post('http://api.maadair.com:8888/sendmessage',data);
+                    // $http.post('http://api.maadair.com:8888/sendmessage',data);
                 }else{
                     $scope.error = "Message field is empty!";
                     $scope.issue = "message";
