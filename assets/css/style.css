@@ -286,6 +286,13 @@ tab {
     background-color: #E8EAE9;
     flex-direction: row-reverse;
 }
+.project a:active, .project a:visited, .project a {
+    text-decoration: none;
+    color: #000;
+}
+.project .about a:hover {
+    color: #990000;
+}
 .contact {
     padding-top: 40px;
 }
