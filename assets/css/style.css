@@ -424,11 +424,15 @@ tab {
     font-size: 20px;
     line-height: 1;
 }
-#contact-area #form #error{
+#contact-area #form #error {
     color: #990000;
 }
-#contact-area #form .error{
-    background-color: #BB0000;
+#contact-area #form .error {
+    background-color: rgba(172, 0, 0, 0.4);
+    color: #fff;
+}
+#contact-area #form .error::placeholder {
+    color: #fff;
 }
 @media only screen and (min-width: 876px) {
     #navbar {

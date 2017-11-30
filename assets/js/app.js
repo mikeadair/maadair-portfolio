@@ -7,17 +7,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('about', {
             url: '/about',
-            templateUrl: 'assets/html/about.html?2'
+            templateUrl: 'assets/html/about.html'
         })
 
         .state('portfolio', {
             url: '/portfolio',
-            templateUrl: 'assets/html/portfolio.html?2'
+            templateUrl: 'assets/html/portfolio.html'
         })
 
         .state('contact', {
             url: '/contact',
-            templateUrl: 'assets/html/contact.html?2',
+            templateUrl: 'assets/html/contact.html',
             controller: 'ContactController'
         });
 
@@ -46,7 +46,7 @@ app.controller('ContactController', function($scope, $http) {
                         subject: $scope.subject,
                         email: $scope.email
                     });
-                    // $http.post('http://api.maadair.com:8888/sendmessage',data);
+                    $http.post('http://localhost:1337/',data);
                 }else{
                     $scope.error = "Message field is empty!";
                     $scope.issue = "message";
